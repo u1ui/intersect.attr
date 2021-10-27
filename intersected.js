@@ -13,7 +13,7 @@ wickedElements.define(
             const el = this.element;
 
 			this.u1IntersectionObserver = new IntersectionObserver(entries=>{
-				el.setAttribute('u1-intersected', entries[0].isIntersecting)
+				el.setAttribute('u1-onintersecting', entries[0].isIntersecting)
 			}, {
 				//root: document.scrollingElement,
 				rootMargin: '0px',
@@ -22,6 +22,7 @@ wickedElements.define(
             this.u1IntersectionObserver.observe(el)
         },
         disconnected() {
+            this.u1IntersectionObserver.observe(el)
             //remove(this.element)
         },
     }
