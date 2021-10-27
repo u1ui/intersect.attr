@@ -5,15 +5,12 @@ import 'https://cdn.jsdelivr.net/npm/wicked-elements@3.1.2/min.js';
 
 wickedElements.define(
     '[u1-intersected]', {
-        init() {
-            console.log(1)
-        },
+        init() {},
         connected() {
-            console.log(2)
             const el = this.element;
 
 			this.u1IntersectionObserver = new IntersectionObserver(entries=>{
-				el.setAttribute('u1-onintersecting', entries[0].isIntersecting)
+				el.setAttribute('u1-intersected', entries[0].isIntersecting)
 			}, {
 				//root: document.scrollingElement,
 				rootMargin: '0px',
