@@ -9,8 +9,8 @@ wickedElements.define(
         connected() {
             const el = this.element;
             const style = getComputedStyle(el);
-            const threshold = parseFloat(style.getPropertyValue('u1-intersected-threshold')) ?: 0;
-            const margin = style.getPropertyValue('u1-intersected-margin') ?: '0px';
+            const threshold = parseFloat(style.getPropertyValue('u1-intersected-threshold')) || 0;
+            const margin = style.getPropertyValue('u1-intersected-margin') || '0px';
 
 			this.u1IntersectionObserver = new IntersectionObserver(entries=>{
 				el.setAttribute('u1-intersected', entries[0].isIntersecting);
