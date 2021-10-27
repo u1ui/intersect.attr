@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Attribute u1-href tests</title>
+
+        <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/base.css/full.css">
+        <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/classless.css/variables.min.css">
+        <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/classless.css/classless.min.css">
+        <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/classless.css/more.min.css">
+        <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/classless.css/simple.min.css">
+
+        <script src="../intersected.js" type=module></script>
+
+    <body>
+
+<style>
+[u1-intersected] {
+    border:2px solid;
+    padding:2rem;
+    margin:2rem;
+    background:red;
+}
+[u1-intersected=true] {
+    background:green;
+}
+</style>
+
+<div>
+    <div style="height:80vh" u1-intersected></div>
+    <div style="height:80vh" u1-intersected></div>
+    <div style="height:80vh" u1-intersected></div>
+</div>
