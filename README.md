@@ -14,7 +14,7 @@ declarative intersection observer
     --u1-intersect-threshold:0.2;  /* set a custom threshold */
     --u1-intersect-margin:-20%;  /* and a margin */
 }
-#myEl[u1-intersected~="1"] { /* use a one of the predefined thresholds "0" "0.5" or "1" */
+#myEl[u1-intersect~="1"] { /* use a one of the predefined thresholds "0" "0.5" or "1" */
     background:red;
 }
 </style>
