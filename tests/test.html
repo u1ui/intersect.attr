@@ -9,26 +9,53 @@
         <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/classless.css/variables.min.css">
         <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/classless.css/classless.min.css">
         <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/classless.css/more.min.css">
-        <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/classless.css/simple.min.css">
+        <!--link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/classless.css/simple.min.css"-->
 
-        <script src="../intersected.js" type=module></script>
+        <script src="../intersect.js" type=module></script>
 
     <body>
 
 <style>
-[u1-intersected] {
+[u1-intersect] {
     border:2px solid;
     padding:2rem;
-    margin:2rem;
+    margin:5rem auto;
     background:red;
+    width:50%;
 }
-[u1-intersected=true] {
+[u1-intersect].u1-intersected {
     background:green;
 }
+
 </style>
 
+
+<div style="position:fixed; top:0; left:0; right:0; bottom:0; opacity:0.2; z-index:-1; border:20vh solid #A49CE1; border-width:20vh 20vw"></div>
+
 <div>
-    <div style="height:80vh" u1-intersected></div>
-    <div style="height:80vh" u1-intersected></div>
-    <div style="height:80vh" u1-intersected></div>
+    <div u1-intersect style="height:20vh; --u1-intersect-margin:0%;  --u1-intersect-threshold:0;" >
+        --u1-intersect-margin:0;<br>
+        --u1-intersect-threshold:0;
+    </div>
+    <div u1-intersect style="height:20vh; --u1-intersect-margin:-20%;  --u1-intersect-threshold:0;" >
+        --u1-intersect-margin:-20%;<br>
+        --u1-intersect-threshold:0;
+    </div>
+    <div u1-intersect style="height:20vh; --u1-intersect-margin:-20%;  --u1-intersect-threshold:1;" >
+        --u1-intersect-margin:-20%;<br>
+        --u1-intersect-threshold:1;
+    </div>
+    <div u1-intersect style="height:20vh; --u1-intersect-margin:-20%;  --u1-intersect-threshold:0.25;" >
+        --u1-intersect-margin:-20%;<br>
+        --u1-intersect-threshold:0.25;
+    </div>
+    <div u1-intersect style="height:20vh;" id=selector1>
+<style style="display:block; font-size:.9rem">
+#selector1:not([u1-intersect~="0.5"]) {
+    background:red;
+}
+</style>
+    </div>
+
+    <div style="height:100vh"></div>
 </div>
