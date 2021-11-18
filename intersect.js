@@ -22,11 +22,14 @@ wickedElements.define(
                     for (const val of thresholds) {
                         if (ratio >= val) attrValue += ' '+val;
                     }
-                    if (ratio >= threshold) onTarget = true;;
+                    if (ratio >= threshold) onTarget = true;
                 }
                 attrValue = attrValue.trim();
 				el.setAttribute('u1-intersect', attrValue);
                 el.classList[onTarget?'add':'remove']('u1-intersected');
+
+                //var event = new CustomEvent('u1-intersected-'+(onTarget?'in':'out'), /*{bubbles:true}*/ );
+                //el.dispatchEvent(event);
 			}, {
 				//root: document.scrollingElement,
 				rootMargin: margin,
