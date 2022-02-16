@@ -27,8 +27,8 @@ wickedElements.define(
                 }
 
 
-                if (entry.boundingClientRect.top + entry.boundingClientRect.height / 2 > innerHeight / 2) {
-                    attrValue += ' below';
+                if (entry.boundingClientRect.top + entry.boundingClientRect.height / 2 < innerHeight / 2) {
+                    attrValue += ' above';
                 }
 
                 attrValue = attrValue.trim();
