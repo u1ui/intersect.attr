@@ -16,14 +16,21 @@ wickedElements.define(
 
             this.u1IntersectionObserver = new IntersectionObserver(entries=>{
                 let attrValue = '';
-                let ratio = entries[0].intersectionRatio;
+                const entry = entries[0];
+                let ratio = entry.intersectionRatio;
                 let onTarget = false;
-                if (entries[0].isIntersecting) {
+                if (entry.isIntersecting) {
                     for (const val of thresholds) {
                         if (ratio >= val) attrValue += ' '+val;
                     }
                     if (ratio >= threshold) onTarget = true;
                 }
+
+
+                if (entry.boundingClientRect.top + entry.boundingClientRect.height / 2 > innerHeight / 2) {
+                    attrValue += ' below';
+                }
+
                 attrValue = attrValue.trim();
 				el.setAttribute('u1-intersect', attrValue);
                 el.classList[onTarget?'add':'remove']('u1-intersected');
