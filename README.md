@@ -21,6 +21,7 @@ declarative intersection observer
 ```
 
 
-## Demo
+## Demos
+https://raw.githack.com/u1ui/intersect.attr/main/tests/minimal.html  
 https://raw.githack.com/u1ui/intersect.attr/main/tests/test.html  
 
