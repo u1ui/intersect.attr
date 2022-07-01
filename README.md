@@ -17,6 +17,21 @@ declarativ intersection-observer
 <div u1-intersect></div>
 ```
 
+```css
+[u1-intersect] {
+    --u1-intersect-margin:-10%;
+    --u1-intersect-threshold:1;
+    background:#fbb;
+}
+[u1-intersect].u1-intersected { background:#bfb; }
+[u1-intersect]::after {
+    display:block;
+    content:'below';
+}
+[u1-intersect].u1-intersected::after { content:'intersected'; }
+[u1-intersect~="above"]::after { content:'above' }
+```
+
 ## Install
 
 ```html
@@ -25,8 +40,8 @@ declarativ intersection-observer
 
 ## Demos
 
-[minimal.html](https://raw.githack.com/u1ui/intersect.attr/main/tests/minimal.html)  
-[test.html](https://raw.githack.com/u1ui/intersect.attr/main/tests/test.html)  
+[minimal.html](http://gcdn.li/u1ui/intersect.attr@main/tests/minimal.html)  
+[test.html](http://gcdn.li/u1ui/intersect.attr@main/tests/test.html)  
 
 ## About
 
