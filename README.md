@@ -35,7 +35,7 @@ declarativ intersection-observer
 ## Install
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/u1ui/intersect.attr@3.0.0/intersect.min.js" type=module>
+<script src="https://cdn.jsdelivr.net/gh/u1ui/intersect.attr@x.x.x/intersect.min.js" type=module>
 ```
 
 ## Demos
